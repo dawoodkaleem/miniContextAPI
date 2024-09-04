@@ -1,15 +1,14 @@
+import Login from "./Components/Login";
+import Profile from "./Components/Profile";
+import UserContextProvider from "./context/UserContextProvider";
 
 function App() {
-  
-
   return (
-    <>
-     
-     <h1 className="text-3xl text-center m-96 font-bold underline">
-      Hello world! Wherer
-    </h1>
-    </>
-  )
+    <UserContextProvider>
+      <Login />
+      <Profile />
+    </UserContextProvider>
+  );
 }
 
-export default App
+export default App;
